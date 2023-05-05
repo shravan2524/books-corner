@@ -305,7 +305,7 @@ app.post("/getcollections", (req, res) => {
   const username = req.body.username;
   User.findOne({username:username})
     .then((data) => {
-      res.send(data.collections);
+      res.send(data.intrested);
     })
     .catch(err => console.log(err));
 })
